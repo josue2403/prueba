@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="formulario.css">
+</head>
+
+<body>
+
+
+  <div class="registro">
+    <form class="formulario" id="registerForm" onsubmit="handleSubmit(event)">
+      <h1>Registro de usuario</h1>
+      <div class="contenedor" id="userInfo">
+        <div class="input-contenedor">
+          <h2 class="letra">Nombres</h2>
+          <i class="fas fa-user icon"></i>
+          <input type="text" id="nombre"  placeholder="Nombres" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+"  title="Por favor, introduce solo letras" required>
+          <span class="error-message" id="errorNombre"></span>
+        </div>
+        <div class="input-contenedor">
+          <i class="fas fa-user icon"></i>
+          <input type="text" id="apellido"  placeholder="Apellidos" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+" required
+            title="Por favor, introduce solo letras">
+          <span class="error-message" id="errorApellido"></span>
+        </div>
+        <div class="input-contenedor">
+          <i class="fas fa-envelope icon"></i>
+          <input type="email" id="email" placeholder="Correo Electrónico" required>
+          <span class="error-message" id="errorEmail"></span>
+        </div>
+        <div class="input-contenedor">
+          <i class="fas fa-id-card icon"></i>
+          <input type="text" id="cedula" placeholder="Cédula" required>
+          <span class="error-message" id="errorCedula"></span>
+        </div>
+        <div class="input-contenedor">
+          <i class="fas fa-home icon"></i>
+          <input type="text" id="direccion" placeholder="Dirección" required>
+          <span class="error-message" id="errorDireccion"></span>
+        </div>
+        <div class="input-contenedor">
+          <i class="fas fa-phone icon"></i>
+          <input type="text" id="telefono" placeholder="Teléfono" required>
+          <span class="error-message" id="errorTelefono"></span>
+        </div>
+        <button type="submit" class="boton boton-active">Registrar</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

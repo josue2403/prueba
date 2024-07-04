@@ -1,0 +1,365 @@
+/* Estilos para el navbar y el formulario de inicio de sesión */
+
+/* Global */
+/* Establece el modelo de caja y los márgenes y rellenos a 0 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Configuraciones generales para el cuerpo del documento */
+  body {
+    font-family: "Oswald", sans-serif; /* Fuente principal */
+    font-size: 16px; /* Tamaño de la fuente */
+    background-size: cover; /* Ajuste del tamaño del fondo */
+    padding-bottom: 15px; /* Espacio en la parte inferior */
+    background-image: url('img/fondo.jpg'); /* Imagen de fondo */
+    height: 100vh; /* Altura del cuerpo igual al 100% de la ventana del navegador */
+  
+  }
+
+  
+  /* Estilos para los enlaces */
+  a {
+    color: #ffffff; /* Color del enlace */
+    text-decoration: none; /* Sin subrayado */
+  }
+  
+  /* Estilos para listas no ordenadas */
+  ul {
+    list-style: none; /* Elimina los marcadores de lista */
+  }
+  
+  /* Contenedor principal */
+  .container {
+    width: 90%; /* Ancho del contenedor */
+    margin: auto; /* Centra el contenedor */
+  }
+  
+
+  .boton-active {
+    width: 50%;
+    /* Ancho completo */
+    padding: 10px;
+    background-color: rgb(29, 214, 100);
+    color: #ffff;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 17px;
+    border: 2px solid #3b3a3a;
+    font-family: 'Oswald', sans-serif;
+    /* Agregar la fuente Oswald */
+    font-weight: bold;
+  }
+  
+  .boton:hover {
+    background-color: rgb(63, 156, 99);
+  }
+  
+  .boton-disabled {
+    background-color: #e48080;
+    color: #000;
+    cursor: not-allowed;
+    border: 2px solid #3b3a3a;
+    border-radius: 17px;
+    font-size: 15px;
+    font-weight: normal;
+  }
+  
+  .boton-disabled:hover {
+    background-color: #e25959;
+    color: #000;
+    cursor: not-allowed;
+    border: 2px solid #3b3a3a;
+    border-radius: 17px;
+  }
+  
+  /* Estilos para el botón de ver/ocultar contraseña */
+  
+  /* Estilos para el contenedor del input */
+  
+  
+  /* Estilos para el botón de ver/ocultar contraseña */
+  .toggle-password {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .input-contenedor .toggle-password i {
+    color: white;
+    padding: 10px;
+    padding-bottom: 25px;
+  }
+  /* Estilos para el formulario de inicio de sesión */
+  
+
+  
+  /* Estilos para el formulario de registro de usuario */
+  .registro {
+    width: 100%; /* Ancho del contenedor */
+    max-width: 1200px; /* Ancho máximo */
+    height: 550px; /* Altura */
+    margin: 200px auto 20px auto; /* Margen */
+    display: flex; /* Alinear elementos en fila */
+    flex-direction: column; /* Diseño en columna */
+    align-items: center; /* Centrar horizontalmente */
+    text-align: center; /* Alineación del texto */
+    justify-content: flex-end; /* Justificación */
+    padding-bottom: 40px; /* Espaciado inferior */
+    color: #fff; /* Color del texto */
+    margin-top: 250px;
+  }
+  
+
+  /* Establece estilos para el formulario */
+  .formulario {
+    width: 50%; /* Ancho del contenedor */
+
+    background:white;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3); /* Sombras */
+   padding: 40px; /* Espaciado interno del formulario */
+   border-radius: 10px; /* Borde redondeado */
+   padding-bottom: 40px; /* Espaciado inferior */
+  
+  
+  }
+  
+  /* Establece estilos para los encabezados h2 */
+  .formulario h1 {
+   text-align: center; /* Alineación central */
+   color: #009292; /* Color del texto */
+   font-size: 27px; /* Tamaño de la fuente */
+   margin-bottom: 30px; /* Margen inferior */
+  }
+  .input-contenedor .letra{
+    font-family: 'Oswald', sans-serif;
+    /* Agregar la fuente Oswald */
+    font-weight: bold;
+    margin-bottom: 10px; /* Margen inferior */
+   }
+  .input-contenedor {
+    position: relative; /* Posición relativa para alinear el icono */
+    margin-bottom: 20px; /* Margen inferior */
+    margin-top: 30px;
+   
+   }
+   
+   /* Establece estilos para los iconos dentro de los contenedores de entrada */
+   .input-contenedor i{
+    position: absolute; /* Posición absoluta para colocar el icono dentro del campo */
+    top: 35%; /* Alinea el icono verticalmente */
+    left: 15px; /* Ajusta la posición horizontal del icono */
+    transform: translateY(-50%); /* Centra verticalmente el icono */
+    color:  #009292; /* Color del icono */
+    font-size: 1rem; /* Tamaño del icono */
+   }
+   .toggle{
+    position: absolute; /* Posición absoluta para colocar el icono dentro del campo */
+    top: 35%; /* Alinea el icono verticalmente */
+    margin-left: 215px; /* Ajusta la posición horizontal del icono */
+    transform: translateY(-50%); /* Centra verticalmente el icono */
+    color: #009292; /* Color del icono */
+    font-size: 1rem; /* Tamaño del icono */
+   }
+   
+   /* Establece estilos cuando el cursor está sobre el icono */
+   /* Agrega estilos específicos para los mensajes de error */
+   .error-message {
+    color: red;
+    font-size: 14px;
+    position: absolute;
+    bottom: -9px; /* Positioned below the input field */
+    left: 9px; /* Adjust to align with the input field */
+   }
+   .message {
+    color: #262626;
+    font-size: 14px;
+    position: absolute;
+    bottom: -9px; /* Positioned below the input field */
+    left: 9px; /* Adjust to align with the input field */
+   }
+  /* Establece estilos para los campos de entrada */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+   width: calc(100% ); /* Ancho del campo con espacio para el icono */
+   padding: 15px 40px; /* Espaciado de relleno con espacio para el icono */
+   font-size: 15px;
+   border: 1px solid #009292; /* Borde */
+   border-radius: 10px; /* Borde redondeado */
+   margin-bottom: 20px; /* Margen inferior */
+   padding-left: 50px;
+  }
+  /* Establece estilos para los campos de entrada */
+  /* Establece estilos para los campos de entrada */
+  /* Establece estilos para los campos de entrada cuando están enfocados */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+   border-color: #329977; /* Cambia el color del borde al enfocar el campo */
+   outline: none; /* Elimina el contorno predeterminado al enfocar */
+   box-shadow: 0 0 20px #329977; /* Agrega una sombra alrededor del campo al enfocar */
+  }
+  
+  /* Establece estilos para los botones */
+  .button {
+   width: 100%; /* Ancho completo */
+   color: white; /* Color del texto */
+   font-size: 18px; /* Tamaño de la fuente */
+   background: #009292; /* Color de fondo */
+   padding: 15px; /* Espacio de relleno */
+   border: none; /* Sin borde */
+   border-radius: 15px; /* Borde redondeado */
+   cursor: pointer; /* Cursor apuntador */
+  }
+    /* Establece estilos para los botones */
+  .button-register {
+    margin-top: 20px;
+      width: 100%; /* Ancho completo */
+      color: white; /* Color del texto */
+      font-size: 18px; /* Tamaño de la fuente */
+      background: #009292; /* Color de fondo */
+      padding: 15px; /* Espacio de relleno */
+      border: none; /* Sin borde */
+      border-radius: 15px; /* Borde redondeado */
+      cursor: pointer; /* Cursor apuntador */
+     }
+  /* Establece estilos cuando el cursor está sobre el botón */
+  .button:hover {
+   background: #26006d; /* Color de fondo al pasar el ratón */
+  }
+  .link{
+   color: #0e008a;
+   margin-left: 8px;
+   border-bottom: 2px solid #0e008a;
+  
+  }
+  .link:hover{
+   color: green;
+   margin-left: 8px;
+   border-bottom: 2px solid green;
+  }
+  .bot a {
+    color: #009292;
+  }
+  
+  .bot a:hover{
+    color: green;
+  }
+  /* Establece estilos para los párrafos */
+  .formulario p {
+   text-align: center; /* Alineación */
+   font-size: 15px; /* Tamaño de la fuente */
+   margin-top: 20px; /* Margen superior */
+  }
+  .edit-section {
+   margin-bottom: 30px; /* Margen inferior */
+   text-align: center; /* Alineación central */
+  }
+  .formulario h2 {
+      color: #262626;
+    text-align: center; /* Alineación */
+    font-size: 15px; /* Tamaño de la fuente */
+    margin-top: 20px; /* Margen superior */
+   }
+  .edit-section h2 {
+   color: #fff; /* Color del texto */
+   font-size: 20px; /* Tamaño de la fuente */
+   margin-bottom: 10px; /* Margen inferior */
+  }
+  
+  .edit-button {
+   background: #329977; /* Color de fondo */
+   color: white; /* Color del texto */
+   font-size: 16px; /* Tamaño de la fuente */
+   border: none; /* Sin borde */
+   border-radius: 10px; /* Borde redondeado */
+   padding: 10px 20px; /* Espacio de relleno */
+   cursor: pointer; /* Cursor apuntador */
+   margin-bottom: 10px; /* Margen inferior */
+  }
+  
+  .edit-button:hover {
+   background: #267653; /* Color de fondo al pasar el ratón */
+  }
+  /* Footer */
+  
+  
+  @media (max-width: 700px) {
+  .menu-btn {
+      display: block; /* Muestra el botón en dispositivos móviles */
+      position: fixed; /* Posiciona el botón en relación a la ventana */
+      top: 26px; /* Posición desde arriba */
+      right: 30px; /* Posición desde la derecha */
+      z-index: 1001; /* Asegura que el botón esté por encima de otros elementos */
+  }
+  .menu-btn:hover {
+      opacity: 0.5; /* Opacidad al pasar el mouse */
+  }
+  .nav-main ul.nav-menu {
+      display: block; /* Muestra el menú de navegación */
+      position: absolute; /* Posiciona el menú en relación a su contenedor */
+      top: 90px; /* Posición desde arriba */
+      right: 0; /* Alinea el menú a la derecha */
+      background: #262626; /* Color de fondo del menú */
+      width: 50%; /* Ancho del menú */
+      height: calc(100vh - 90px); /* Altura basada en la ventana */
+      border-right: #ccc 1px solid; /* Borde derecho */
+      opacity: 0.9; /* Opacidad del menú */
+      padding: 5px; /* Relleno interno */
+      transform: translateX(100%); /* Mueve el menú fuera de la vista */
+      transition: transform 0.5s ease-in-out; /* Transición para el menú */
+  }
+  .nav-main ul.nav-menu li {
+      padding: 20px; /* Relleno interno */
+      border-bottom: #ccc solid 1px; /* Borde inferior */
+      font-size: 14px; /* Tamaño de fuente */
+  }
+  .nav-main ul.nav-menu li:last-child {
+      border-bottom: 0; /* Elimina el borde del último elemento */
+  }
+  .nav-main ul.nav-menu.show {
+      transform: translateX(0); /* Mueve el menú a la vista */
+  }
+  .nav-main ul.nav-menu-right {
+      margin-right: 50px; /* Margen derecho */
+  }
+  .footer {
+      padding: 20px 0 ; /* Relleno interno */
+  }
+  .footer p {
+      font-size: 15px; /* Tamaño de fuente */
+  }
+  }
+  
+  
+  @media (max-height: 1000px) and (min-height:900px){
+  
+  .footer {
+      padding: 20px auto ; /* Relleno interno */
+      bottom: 0;
+  }
+  .footer p {
+      font-size: 15px; /* Tamaño de fuente */
+  }
+  }
+  
+  @media (max-height: 3000px) and (min-height:900px){
+  .footer {
+      padding: 20px auto ; /* Relleno interno */
+      bottom: 0;
+  }
+  .footer p {
+      font-size: 20px; /* Tamaño de fuente */
+  }
+  }
